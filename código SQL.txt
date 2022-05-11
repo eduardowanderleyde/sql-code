@@ -1,0 +1,39 @@
+ALTER TABLE estudantes
+add constraint ck_uf
+CHECK (uf IN (('AC','AL','AP','AM','BA','DF','GO','MA',
+'MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RR','SC','SP','SE','TO' ))
+);
+
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+CREATE TABLE Persons
+ (
+  PersonID int,
+  LastName varchar(255),
+  FirstName varchar(255),
+  Address varchar(255),
+  City varchar(255) 
+);
+
+CREATE TABLE professor (
+ID int(11), 
+NOME varchar(50),
+CPF VARCHAR(50),
+departamento INT,
+PRIMARY KEY (ID) 
+FOREIGN KEY (departamento) REFERENCES departamento(ID)
+);
+
+CREATE TABLE departamento
+ (
+  ID int,
+  CPF varchar(255),
+  Nome varchar(255),
+  departamento INT,
+PRIMARY KEY (ID))
+;
+
+ALTER TABLE estudante 
+AUTO_INCREMENT ID
